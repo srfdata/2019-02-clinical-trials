@@ -601,7 +601,7 @@ if ("max_end_date" %in% colnames(ictrp_trials)) {
   )
 
   # read in
-  embd_euctr_data <- read_csv("input/embd/trials.csv", col_types = cols())
+  embd_euctr_data <- read_csv("input/ignore/embd/trials.csv", col_types = cols())
 
   # status codes
   embd_status_codes <- data.frame(
