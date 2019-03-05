@@ -12,6 +12,31 @@ The code for the herein described process can also be freely downloaded from [ht
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">2019-02-clinical-trials</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/srfdata/2019-02-clinical-trials" property="cc:attributionName" rel="cc:attributionURL">SRF Data</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Attribution ShareAlike 4.0 International License</a>.
 
+
+### Data description of output files
+
+#### `trials.csv`
+
+| Attribute | Type | Description |
+|-------|------|-----------------------------------------------------------------------------|
+| unique_id | String | Unique identifier assigned by SRF |
+| primary | String | Trial identification number |
+| size | Numeric | Number of people participating in study (total, world wide) |
+| study_type | Factor | Type of study, either Interventional or Observational |
+| status | Factor | Status of the trial, either Completed, Ongoing, Terminated or Unknown |
+| primary_sponsor | String | The primary sponsor of the trial (responsible for updating register information) |
+| leading_institution | String | The (scientifically) leading institution of the trial |
+| registration_date | Date | Date the trial was registered in the registry |
+| start_date | Date | Date on which the enrollment process started |
+| end_date | Date | Date on which the enrollment process ended |
+| results_submitted | Boolean | Equals true if a result was submitted to the trial registry |
+| publication_found | Boolean | Equals true if the trial ID was found in cochrane / pubmed |
+| source | Factor | Shows in which registry this trial was found, either NCT, EUCTR or DRKS |
+| has_g_scholar_results | Boolean | Equals true if google scholar returned any results when queried with the trial id |
+| primary_sponsor_simple | String | Simplified Name of primary sponsor (mainly done for swiss institutions) |
+| leading_institution_simple | String | Simplified Name of leading institution (mainly done for swiss institutions) |
+
+
 ### Procedure
 
 On the flow chart below, we describe how we tried to find all trials related to Switzerland and how we evaluated whether a publication for that trial exitsts.
